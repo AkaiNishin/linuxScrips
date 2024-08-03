@@ -1,4 +1,3 @@
-
 #include <argparse/argparse.hpp>
 #include <string>
 #include <cstdlib>

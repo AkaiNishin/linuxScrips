@@ -15,9 +15,11 @@ FetchContent_MakeAvailable(argparse)
 
 target_link_libraries(${PROJECT_NAME} argparse)
 
+set(SCRIP_SOURCE ${CMAKE_SOURCE_DIR}/scrips)
+set(SCRIP_DIR ${CMAKE_SOURCE_DIR}/scrips)
 add_custom_target(
     copy_scrips ALL
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/scrips ${CMAKE_BINARY_DIR}/scrips
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${SCRIP_SOURCE} ${SCRIP_DIR}
     COMMENT "Copy script to binary directory"
 )
 
